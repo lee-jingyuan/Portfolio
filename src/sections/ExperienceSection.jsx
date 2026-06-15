@@ -41,16 +41,14 @@ const ExperienceSection = () => {
       className="w-full md:mt-40 mt-20 section-padding xl:px-0"
     >
       <div className="w-full h-full md:px-20 px-5">
-        <TitleHeader
-          title="Journey & Achievements"
-        />
+        <TitleHeader title="Journey & Achievements" />
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="flex xl:flex-row flex-col items-center justify-between gap-10">
                   {/* Left: existing content */}
-                  <div className="xl:w-4/6 w-full">
+                  <div className="xl:w-4/6 w-full pr-50">
                     <div className="flex items-start">
                       <div className="timeline-wrapper">
                         <div className="timeline" />
@@ -78,19 +76,16 @@ const ExperienceSection = () => {
                             ))}
                           </ul>
                         </div>
-                        
                       </div>
                     </div>
                   </div>
-                  {card.image && (
-                    <div className="expText xl:w-2/6 w-full flex items-center justify-center mt-6 xl:mt-0">
-                      <img
-                        src={card.image}
-                        alt={card.title}
-                        className="w-full max-w-sm object-contain rounded-xl shadow-lg"
-                      />
-                    </div>
-                  )}
+                  <div className="expText xl:w-2/6 w-[70%] flex items-center justify-center mt-6 xl:mt-0">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full max-w-sm object-contain rounded-xl shadow-lg"
+                    />
+                  </div>
                 </div>
               </div>
             ))}

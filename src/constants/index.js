@@ -49,7 +49,7 @@ const abilities = [
   },
 ];
 
-const techStackImgs = [
+const techStack = [
   {
     name: "C++",
     imgPath: "images/logos/cpp.png",
@@ -421,13 +421,112 @@ const internationalPhotos = [
   },
 ];
 
+const projects = [
+  {
+    img: "images/WRORobot.png",
+    alt: "WRO Robot",
+    title: "WRO Championship Robot",
+    tagline: "Designed for reliability, adaptability and performance.",
+    link: "/robot",
+  },
+  {
+    img: "images/FLL2025.png",
+    alt: "FLL 2025",
+    title: "FLL 2025 — SUBMERGED",
+    tagline: "National Champion. Best Robot Run. Houston invite.",
+    link: "/fll",
+  },
+  {
+    img: "images/EVO.png",
+    alt: "EVO Microcontroller",
+    title: "EVO Microcontroller",
+    tagline: "Custom ESP32-S3 controller built for competitive robotics.",
+    link: "/evo",
+  },
+  {
+    img: "images/NOI.png",
+    alt: "NOI Competitive Programming",
+    title: "NOI 2026 — Competitive Programming",
+    tagline: "Self-taught C++ and algorithms. Qualified as a Finalist.",
+    link: "/noi",
+  },
+];
+
+const fllNavLinks = [
+  { name: "Robot", link: "#robot" },
+  { name: "Runs", link: "#runs" },
+  { name: "SCUBATHON", link: "#scubathon" },
+  { name: "Results", link: "#results" },
+];
+
+const stats = [
+  { value: "8", label: "Robot Runs", suffix: "" },
+  { value: "585", label: "Points", suffix: "/620" },
+  { value: "500", label: "Hours", suffix: "+" },
+  { value: "2", label: "Awards", suffix: "" },
+];
+
+const runs = [
+  { id: 1, points: 95, time: "11s", videoSrc: "videos/fll25/run1.mp4" },
+  { id: 2, points: 50, time: "7s", videoSrc: "videos/fll25/run2.mp4" },
+  { id: 3, points: 50, time: "13s", videoSrc: "videos/fll25/run3.mp4" },
+  { id: 4, points: 40, time: "13s", videoSrc: "videos/fll25/run4.mp4" },
+  { id: "5a", points: 0, time: "2s", videoSrc: "videos/fll25/run5a.mp4" },
+  { id: "5b", points: 45, time: "13s", videoSrc: "videos/fll25/run5b.mp4" },
+  { id: 6, points: 50, time: "16s", videoSrc: "videos/fll25/run6.mp4" },
+  { id: 7, points: 45, time: "9s", videoSrc: "videos/fll25/run7.mp4" },
+  {
+    id: 8,
+    points: 175,
+    time: "25s",
+    videoSrc: "videos/fll25/run8.mp4",
+    highlight: true,
+  },
+];
+
+const scubathonStages = [
+  {
+    title: "01: Camera Feed",
+    desc: "Display diver's POV using a camera onto a screen for real-time monitoring.",
+  },
+  {
+    title: "02: HUD Overlay",
+    desc: "Overlay heads-up display and diver status onto the OpenCV video feed.",
+  },
+  {
+    title: "03: ESP32 Control",
+    desc: "Use ESP32 to control lights and servos for physical feedback systems.",
+  },
+  {
+    title: "04: Collision Alerts",
+    desc: "Ultrasonic sensors detect nearby obstacles and alert the diver.",
+  },
+  {
+    title: "05: Voice Commands",
+    desc: "Add voice command input to the ESP32 for hands-free operation underwater.",
+  },
+  {
+    title: "06:3D Printed Housing",
+    desc: "3D print custom compartments for each module to create a wearable device.",
+  },
+];
+
+const FLLtechStack = [
+  { title: "Python", desc: "OpenCV + YOLO human detection" },
+  { title: "C++", desc: "Arduino IDE for ESP32 firmware" },
+  { title: "OpenCV", desc: "Camera feed and HUD overlay" },
+  { title: "YOLO", desc: "Real-time human detection" },
+  { title: "ESP32", desc: "Servo and LED control" },
+  { title: "TinkerCAD", desc: "3D modelling for housing" },
+];
+
 export {
   words,
   abilities,
   counterItems,
   expCards,
   socialImgs,
-  techStackImgs,
+  techStack,
   navLinks,
   wroNavLinks,
   robotStats,
@@ -442,4 +541,10 @@ export {
   algorithms,
   nationalPhotos,
   internationalPhotos,
+  projects,
+  fllNavLinks,
+  stats,
+  runs,
+  scubathonStages,
+  FLLtechStack,
 };

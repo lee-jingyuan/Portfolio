@@ -169,7 +169,7 @@ const WRORobot = () => {
 
       {/* OVERVIEW */}
       <section className="section-padding padding-x-lg">
-        <TitleHeader title="The Mission" sub="WRO RoboMission 2025" />
+        <TitleHeader title="The Mission" />
         <div className="mt-16 grid-2-cols items-center gap-10">
           <div className="flex flex-col gap-4">
             <p className="text-white-50 text-lg leading-relaxed">
@@ -270,7 +270,7 @@ const WRORobot = () => {
             <h3 className="text-xl font-semibold">National Finals 2025</h3>
             <p className="text-white-50 text-sm">Singapore</p>
             <video
-              src="images/national-run.mp4"
+              src="videos/national-run.mp4"
               controls
               playsInline
               className="w-full rounded-xl border border-black-50 bg-zinc-900"
@@ -280,7 +280,7 @@ const WRORobot = () => {
             <h3 className="text-xl font-semibold">International Finals 2025</h3>
             <p className="text-white-50 text-sm">Singapore</p>
             <video
-              src="images/international-run.mp4"
+              src="videos/international-run.mp4"
               controls
               playsInline
               className="w-full rounded-xl border border-black-50 bg-zinc-900"

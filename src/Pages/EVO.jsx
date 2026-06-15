@@ -124,7 +124,7 @@ const EVO = () => {
 
       {/* WHAT IS EVO */}
       <section id="what" className="section-padding padding-x-lg">
-        <TitleHeader title="What is EVO?" sub="Background" />
+        <TitleHeader title="What is EVO?"  />
         <div className="mt-16 grid-2-cols items-center gap-10">
           <div className="flex flex-col gap-4">
             <p className="text-white-50 text-lg leading-relaxed">
@@ -151,13 +151,13 @@ const EVO = () => {
 
       {/* HARDWARE OVERVIEW */}
       <section id="hardware" className="section-padding padding-x-lg space-y-10">
-        <TitleHeader title="Hardware Overview" sub="Ports & Specs" />
+        <TitleHeader title="Hardware Overview"/>
         <AnimatedCounter constant={ports} />
       </section>
 
       {/* CONTRIBUTIONS */}
       <section id="contributions" className="section-padding padding-x-lg">
-        <TitleHeader title="My Contributions" sub="Development & Testing" />
+        <TitleHeader title="My Contributions" />
         <div className="mt-16 flex flex-col gap-6">
           {contributions.map((item) => (
             <div key={item.number} className="contribution-card card-border rounded-xl p-6 md:p-8 flex gap-6 items-start">
@@ -173,7 +173,7 @@ const EVO = () => {
 
       {/* HOW IT POWERED MY ROBOT */}
       <section id="robot-setup" className="section-padding padding-x-lg">
-        <TitleHeader title="In Competition" sub="How EVO powered AstroNuts" />
+        <TitleHeader title="In Competition"  />
         <div className="mt-16">
           <p className="text-white-50 text-lg leading-relaxed max-w-2xl mb-10 mx-auto">
             EVO was the brain of the AstroNuts WRO 2025 robot. Its expanded port count made it possible to run a sensor configuration that wouldn't fit on any standard LEGO controller — directly contributing to the team's National Championship and International Silver Medal.
@@ -192,7 +192,7 @@ const EVO = () => {
 
       {/* LINKS */}
       <section id="links" className="section-padding padding-x-lg">
-        <TitleHeader title="Resources" sub="Docs & Source" />
+        <TitleHeader title="Resources" />
         <div className="mt-16 grid-2-cols gap-6">
           <a
             href="https://evo.readthedocs.io/en/latest/"

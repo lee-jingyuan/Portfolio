@@ -116,7 +116,7 @@ const NOI = () => {
 
       {/* JOURNEY */}
       <section id="journey" className="section-padding padding-x-lg">
-        <TitleHeader title="How It Started" sub="The Journey" />
+        <TitleHeader title="How It Started"  />
         <div className="mt-16 max-w-3xl mx-auto flex flex-col gap-6">
           <p className="fade-up text-white-50 text-lg leading-relaxed">
             I don't take the subject Computing. My programming background came
@@ -142,7 +142,7 @@ const NOI = () => {
 
       {/* PREPARATION */}
       <section id="preparation" className="section-padding padding-x-lg">
-        <TitleHeader title="How I Prepared" sub="Self-Directed Learning" />
+        <TitleHeader title="How I Prepared" />
         <div className="mt-16 grid-2-cols items-center gap-10">
           <div className="flex flex-col gap-8">
             {[
@@ -198,7 +198,7 @@ const NOI = () => {
     <iframe
       src="images/noi-notes.pdf"
       title="NOI preparation notes"
-      className="w-full h-600px"
+      className="w-[95%] h-[600px]"
     />
   </div>
 </div>
@@ -207,7 +207,7 @@ const NOI = () => {
 
       {/* ALGORITHMS */}
       <section id="algorithms" className="section-padding padding-x-lg">
-        <TitleHeader title="Algorithms Studied" sub="What I Learned" />
+        <TitleHeader title="Algorithms Studied" />
         <div className="mt-16 grid-4-cols">
           {algorithms.map((algo) => (
             <div
@@ -234,7 +234,7 @@ const NOI = () => {
 
       {/* REFLECTION */}
       <section id="reflection" className="section-padding padding-x-lg">
-        <TitleHeader title="Reflection" sub="What It Changed" />
+        <TitleHeader title="Reflection" />
         <div className="mt-16 max-w-3xl mx-auto flex flex-col gap-6">
           <p className="fade-up text-white-50 text-lg leading-relaxed">
             Going through NOI was one of the more challenging things I've done

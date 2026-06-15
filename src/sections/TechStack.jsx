@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import TitleHeader from "../components/TitleHeader";
-import { techStackImgs } from "../constants";
+import { techStack } from "../constants";
 
 // register plugin once
 gsap.registerPlugin(ScrollTrigger);
@@ -45,11 +45,10 @@ const TechStack = () => {
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
           title="Tools & Technologies"
-          sub="Programming and engineering tools I use"
         />
 
         <div className="tech-grid">
-          {techStackImgs.map((tech) => (
+          {techStack.map((tech) => (
             <div
               key={tech.name}
               className="card-border tech-card overflow-hidden group xl:rounded-5xl rounded-lg"

@@ -198,7 +198,7 @@ const NOI = () => {
     <iframe
       src="images/noi-notes.pdf"
       title="NOI preparation notes"
-      className="w-[95%] h-[600px]"
+      className="w-full h-[600px]"
     />
   </div>
 </div>

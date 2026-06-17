@@ -309,6 +309,11 @@ const contributions = [
     title: "Code Review & Bug Reporting",
     desc: "Conducted in-depth code reviews and  logged bugs, helping inprove reliability.",
   },
+  {
+    number: "05",
+    title: "EVO Beta Tester Certificate",
+    desc: "Received official certification for beta testing and development contributions to the EVO microcontroller prior to its public release.",
+  },
 ];
 
 const robotSetup = [

@@ -7,6 +7,7 @@ import TechStack from "../sections/TechStack";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
 import { navLinks, abilities} from "../constants";
+import Testimonial from "../sections/Testimonial";
 
 const Home = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Home = () => {
       <ShowcaseSection/>
       <FeatureCards  constant={abilities}/>
       <ExperienceSection />
+      <Testimonial/>
       <TechStack />
       <Footer />
     </>

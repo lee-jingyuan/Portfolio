@@ -13,8 +13,6 @@ import AnimatedCounter from "../components/AnimatedCounter";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 const EVO = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,14 +23,21 @@ const EVO = () => {
     gsap.fromTo(
       ".evo-page",
       { opacity: 0 },
-      { opacity: 1, duration: 0.6, ease: "power2.inOut" }
+      { opacity: 1, duration: 0.6, ease: "power2.inOut" },
     );
 
     // Hero text
     gsap.fromTo(
       ".evo-hero-line",
       { y: 60, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, stagger: 0.12, ease: "power3.out", delay: 0.4 }
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.12,
+        ease: "power3.out",
+        delay: 0.4,
+      },
     );
 
     // Port cards
@@ -40,9 +45,12 @@ const EVO = () => {
       ".port-card",
       { y: 30, opacity: 0 },
       {
-        y: 0, opacity: 1, duration: 0.6, stagger: 0.07,
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.07,
         scrollTrigger: { trigger: "#hardware", start: "top 75%" },
-      }
+      },
     );
 
     // Contribution cards
@@ -50,9 +58,12 @@ const EVO = () => {
       ".contribution-card",
       { y: 40, opacity: 0 },
       {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.12,
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.12,
         scrollTrigger: { trigger: "#contributions", start: "top 75%" },
-      }
+      },
     );
 
     // Robot setup cards
@@ -60,9 +71,12 @@ const EVO = () => {
       ".robot-setup-card",
       { y: 30, opacity: 0 },
       {
-        y: 0, opacity: 1, duration: 0.7, stagger: 0.1,
+        y: 0,
+        opacity: 1,
+        duration: 0.7,
+        stagger: 0.1,
         scrollTrigger: { trigger: "#robot-setup", start: "top 80%" },
-      }
+      },
     );
   }, []);
 
@@ -89,7 +103,9 @@ const EVO = () => {
         {/* Bottom-left text */}
         <div className="absolute bottom-12 md:bottom-16 left-6 md:left-20 z-10 max-w-2xl">
           <div className="flex gap-2 flex-wrap mb-5">
-            <span className="evo-hero-line hero-badge">Custom Microcontroller</span>
+            <span className="evo-hero-line hero-badge">
+              Custom Microcontroller
+            </span>
             <span className="evo-hero-line hero-badge">ESP32-S3</span>
           </div>
 
@@ -110,7 +126,7 @@ const EVO = () => {
               Software Versatility
             </span>
             <span className="evo-hero-line px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm border border-white/20">
-               Modular Design
+              Modular Design
             </span>
           </div>
         </div>
@@ -124,17 +140,25 @@ const EVO = () => {
 
       {/* WHAT IS EVO */}
       <section id="what" className="section-padding padding-x-lg">
-        <TitleHeader title="What is EVO?"  />
+        <TitleHeader title="What is EVO?" />
         <div className="mt-16 grid-2-cols items-center gap-10">
           <div className="flex flex-col gap-4">
             <p className="text-white-50 text-lg leading-relaxed">
-              EVO is a custom microcontroller designed by my CCA coach. Built on the ESP32-S3, it was created to overcome the port limitations of standard LEGO controllers like the EV3 and SPIKE Prime — which cap out at 4 motors and 4 sensors, or 6 combined ports.
+              EVO is a custom microcontroller designed by my CCA coach. Built on
+              the ESP32-S3, it was created to overcome the port limitations of
+              standard LEGO controllers like the EV3 and SPIKE Prime — which cap
+              out at 4 motors and 4 sensors, or 6 combined ports.
             </p>
             <p className="text-white-50 text-lg leading-relaxed">
-              In 2025, WRO opened the category to allow open electronics alongside LEGO components. EVO was built to take full advantage of this — enabling teams to connect far more sensors, servos, and motors than any LEGO controller allows, while remaining WRO legal.
+              In 2025, WRO opened the category to allow open electronics
+              alongside LEGO components. EVO was built to take full advantage of
+              this — enabling teams to connect far more sensors, servos, and
+              motors than any LEGO controller allows, while remaining WRO legal.
             </p>
             <p className="text-white-50 text-lg leading-relaxed">
-              Within the club, EVO was made available to advanced teams. My team was among the first to use it in competition, contributing to its development and testing.
+              Within the club, EVO was made available to advanced teams. My team
+              was among the first to use it in competition, contributing to its
+              development and testing.
             </p>
           </div>
 
@@ -150,8 +174,11 @@ const EVO = () => {
       </section>
 
       {/* HARDWARE OVERVIEW */}
-      <section id="hardware" className="section-padding padding-x-lg space-y-10">
-        <TitleHeader title="Hardware Overview"/>
+      <section
+        id="hardware"
+        className="section-padding padding-x-lg space-y-10"
+      >
+        <TitleHeader title="Hardware Overview" />
         <AnimatedCounter constant={ports} />
       </section>
 
@@ -160,23 +187,42 @@ const EVO = () => {
         <TitleHeader title="My Contributions" />
         <div className="mt-16 flex flex-col gap-6">
           {contributions.map((item) => (
-            <div key={item.number} className="contribution-card card-border rounded-xl p-6 md:p-8 flex gap-6 items-start">
-              <span className="text-white-50 text-sm font-mono mt-1 flex-none">{item.number}</span>
+            <div
+              key={item.number}
+              className="contribution-card card-border rounded-xl p-6 md:p-8 flex gap-6 items-start"
+            >
+              <span className="text-white-50 text-sm font-mono mt-1 flex-none">
+                {item.number}
+              </span>
               <div>
-                <h3 className="text-white font-semibold text-xl mb-2">{item.title}</h3>
-                <p className="text-white-50 text-lg leading-relaxed">{item.desc}</p>
+                <h3 className="text-white font-semibold text-xl mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white-50 text-lg leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
+          <div className="mt-8 flex justify-center">
+            <img
+              src="images/evo-beta-cert.png"
+              alt="EVO Beta Tester Certificate"
+              className="max-w-xl rounded-3xl shadow-lg border border-white/10"
+            />
+          </div>
         </div>
       </section>
 
       {/* HOW IT POWERED MY ROBOT */}
       <section id="robot-setup" className="section-padding padding-x-lg">
-        <TitleHeader title="In Competition"  />
+        <TitleHeader title="In Competition" />
         <div className="mt-16">
           <p className="text-white-50 text-lg leading-relaxed max-w-2xl mb-10 mx-auto">
-            EVO was the brain of the AstroNuts WRO 2025 robot. Its expanded port count made it possible to run a sensor configuration that wouldn't fit on any standard LEGO controller — directly contributing to the team's National Championship and International Silver Medal.
+            EVO was the brain of the AstroNuts WRO 2025 robot. Its expanded port
+            count made it possible to run a sensor configuration that wouldn't
+            fit on any standard LEGO controller — directly contributing to the
+            team's National Championship and International Silver Medal.
           </p>
           <FeatureCards constant={robotSetup} cols="4" />
           <div className="mt-8">
@@ -202,8 +248,13 @@ const EVO = () => {
           >
             <span className="text-3xl">📖</span>
             <h3 className="text-white font-semibold text-xl">Documentation</h3>
-            <p className="text-white-50 text-sm">Official EVO docs on ReadTheDocs — hardware specs, API reference, and usage guides.</p>
-            <span className="text-white-50 text-sm group-hover:text-white transition-colors mt-2">evo.readthedocs.io ↗</span>
+            <p className="text-white-50 text-sm">
+              Official EVO docs on ReadTheDocs — hardware specs, API reference,
+              and usage guides.
+            </p>
+            <span className="text-white-50 text-sm group-hover:text-white transition-colors mt-2">
+              evo.readthedocs.io ↗
+            </span>
           </a>
           <a
             href="https://github.com/ljk1331ljk/EVO-arduino/releases"
@@ -212,9 +263,16 @@ const EVO = () => {
             className="card-border rounded-xl p-8 flex flex-col gap-3 hover:border-white/30 transition-colors group"
           >
             <span className="text-3xl">⚙️</span>
-            <h3 className="text-white font-semibold text-xl">GitHub Releases</h3>
-            <p className="text-white-50 text-sm">Arduino library releases for EVO — from early beta versions through to v1.0.0.</p>
-            <span className="text-white-50 text-sm group-hover:text-white transition-colors mt-2">github.com ↗</span>
+            <h3 className="text-white font-semibold text-xl">
+              GitHub Releases
+            </h3>
+            <p className="text-white-50 text-sm">
+              Arduino library releases for EVO — from early beta versions
+              through to v1.0.0.
+            </p>
+            <span className="text-white-50 text-sm group-hover:text-white transition-colors mt-2">
+              github.com ↗
+            </span>
           </a>
         </div>
       </section>

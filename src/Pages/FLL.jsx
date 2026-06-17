@@ -393,7 +393,7 @@ const FLL = () => {
       {/* RESULTS */}
       <section id="results" className="section-padding padding-x-lg">
         <TitleHeader title="Results" />
-        <div className="mt-16">
+        <div className="mt-16 grid-2-cols items-center gap-10">
           <div className="result-card card-border rounded-xl p-8 flex flex-col gap-6">
             <div>
               <p className="text-white-50 text-sm">2025 · Singapore</p>
@@ -422,6 +422,15 @@ const FLL = () => {
               championship due to logistical constraints and time
               considerations.
             </p>
+          </div>
+
+          {/* Photo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="images/fll-result.jpeg"
+              alt="FLL 2025 team with award"
+              className="w-full max-w-md rounded-xl border border-black-50 shadow-lg object-cover"
+            />
           </div>
         </div>
       </section>

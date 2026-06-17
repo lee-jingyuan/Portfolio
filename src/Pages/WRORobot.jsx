@@ -265,7 +265,17 @@ const WRORobot = () => {
       {/* COMPETITION RUNS */}
       <section id="videos" className="section-padding padding-x-lg">
         <TitleHeader title="Competition Runs" sub="Full Autonomous Runs" />
-        <div className="mt-16 grid-2-cols gap-10">
+        <div className="mt-16 grid grid-cols-3 gap-10">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-xl font-semibold">Side Quest 4</h3>
+            <p className="text-white-50 text-sm">National SQ4 Winner</p>
+            <video
+              src="videos/SQ4.mp4"
+              controls
+              playsInline
+              className="w-full rounded-xl border border-black-50 bg-zinc-900"
+            />
+          </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-xl font-semibold">National Finals 2025</h3>
             <p className="text-white-50 text-sm">Singapore</p>

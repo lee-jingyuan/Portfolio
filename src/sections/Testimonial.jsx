@@ -8,7 +8,7 @@ const Testimonial = () => {
         
         {/* Coach Name */}
         <p className="text-white-500 text-sm mb-3">
-          From Coach Gilbert Heng
+          From My Coach, Gilbert Heng
         </p>
 
         {/* Header bar */}

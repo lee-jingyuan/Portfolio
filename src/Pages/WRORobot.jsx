@@ -265,7 +265,7 @@ const WRORobot = () => {
       {/* COMPETITION RUNS */}
       <section id="videos" className="section-padding padding-x-lg">
         <TitleHeader title="Competition Runs" sub="Full Autonomous Runs" />
-        <div className="mt-16 grid grid-cols-3 gap-10">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="flex flex-col gap-4">
             <h3 className="text-xl font-semibold">Side Quest 4</h3>
             <p className="text-white-50 text-sm">National SQ4 Winner</p>

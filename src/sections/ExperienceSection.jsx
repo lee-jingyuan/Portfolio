@@ -43,27 +43,27 @@ const ExperienceSection = () => {
       <div className="w-full h-full md:px-20 px-5">
         <TitleHeader title="Journey & Achievements" />
         <div className="mt-32 relative">
-          <div className="relative z-50 xl:space-y-32 space-y-10">
+          <div className="relative z-50 xl:space-y-32 space-y-16">
             {expCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
-                <div className="flex xl:flex-row flex-col items-center justify-between gap-10">
-                  {/* Left: existing content */}
-                  <div className="xl:w-4/6 w-full pr-50">
+                <div className="flex xl:flex-row flex-col items-center justify-between gap-10 xl:gap-10">
+                  {/* Left: Content */}
+                  <div className="xl:w-4/6 w-full xl:pr-50 pr-0">
                     <div className="flex items-start">
                       <div className="timeline-wrapper">
                         <div className="timeline" />
                         <div className="gradient-line w-1 h-full" />
                       </div>
-                      <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
-                        <div className="timeline-logo">
+                      <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20 min-w-0">
+                        <div className="timeline-logo flex-shrink-0">
                           <img
                             src={card.logoPath}
                             alt="logo"
                             className="object-contain"
                           />
                         </div>
-                        <div>
-                          <h1 className="font-semibold text-3xl">
+                        <div className="min-w-0 flex-1">
+                          <h1 className="font-semibold text-3xl break-words">
                             {card.title}
                           </h1>
                           <p className="my-5 text-white-50">📅{card.date}</p>
@@ -79,11 +79,12 @@ const ExperienceSection = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="expText xl:w-2/6 w-[70%] flex items-center justify-center mt-6 xl:mt-0">
+                  {/* Right: Image */}
+                  <div className="expText w-full xl:w-2/6 flex items-center justify-center md:ml-0 ml-20 md:pr-0 pr-5">
                     <img
                       src={card.image}
                       alt={card.title}
-                      className="w-full max-w-sm object-contain rounded-xl shadow-lg"
+                      className="w-full sm:max-w-xs max-w-[90vw] object-contain rounded-xl shadow-lg"
                     />
                   </div>
                 </div>
@@ -96,4 +97,4 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
+export default ExperienceSection; 

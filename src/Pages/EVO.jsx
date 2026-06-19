@@ -208,7 +208,7 @@ const EVO = () => {
             <img
               src="images/evo-beta-cert.png"
               alt="EVO Beta Tester Certificate"
-              className="max-w-xl rounded-3xl shadow-lg border border-white/10"
+              className="w-[80%] md:max-w-xl rounded-3xl shadow-lg border border-white/10"
             />
           </div>
         </div>

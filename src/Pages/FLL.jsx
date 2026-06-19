@@ -11,7 +11,7 @@ import {
   runs,
   scubathonStages,
   FLLtechStack,
-} from "../constants";
+} from "../data/fll";
 import AnimatedCounter from "../components/AnimatedCounter";
 import { Stage } from "@react-three/drei";
 import FeatureCards from "../sections/FeatureCards";
@@ -104,7 +104,7 @@ const FLL = () => {
 
   return (
     <div className="fll-page text-white bg-black min-h-screen">
-      <NavBar constant={fllNavLinks} showBack={true} />
+      <NavBar links={fllNavLinks} showBack={true} />
 
       {/* HERO */}
       <section className="relative min-h-screen overflow-hidden">
@@ -195,7 +195,7 @@ const FLL = () => {
 
       {/* STATS */}
       <div className="stats-section padding-x-lg mt-10">
-        <AnimatedCounter constant={stats} />
+        <AnimatedCounter items={stats} />
       </div>
 
       {/* ROBOT DESIGN */}
@@ -382,11 +382,11 @@ const FLL = () => {
 
           {/* Stages */}
           <TitleHeader title="Development Stages" />
-          <FeatureCards constant={scubathonStages} />
+          <FeatureCards items={scubathonStages} />
 
           {/* Tech stack */}
           <TitleHeader title="Tech Stack" />
-          <FeatureCards constant={FLLtechStack} />
+          <FeatureCards items={FLLtechStack} />
         </div>
       </section>
 

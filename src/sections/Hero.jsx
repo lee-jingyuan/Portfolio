@@ -1,5 +1,5 @@
 import React from "react";
-import { counterItems, words } from "../constants";
+import { counterItems, words } from "../data/home";
 import Button from "../components/Button";
 import HeroExperience from "../components/HeroModels/HeroExperience";
 import { useGSAP } from "@gsap/react";
@@ -55,7 +55,7 @@ const Hero = () => {
             </p>
             <Button
               className="md:w-80 md:h-16 w-60 h-12"
-              id="button"
+              targetId="work"
               text="See my Work"
             />
           </div>
@@ -67,7 +67,7 @@ const Hero = () => {
         </figure>
         {/*Right: 3d model*/}
       </div>
-      <AnimatedCounter constant={counterItems} />
+      <AnimatedCounter items={counterItems} />
     </section>
   );
 };

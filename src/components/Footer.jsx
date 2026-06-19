@@ -1,5 +1,5 @@
 import React from "react";
-import { socialImgs } from "../constants";
+import { socialImgs } from "../data/common";
 
 const Footer = () => {
   return (

@@ -7,7 +7,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import TitleHeader from "../components/TitleHeader";
 import EvoBgExperience from "../components/HeroModels/EvoBgExperience";
-import { evoNavLinks, ports, contributions, robotSetup } from "../constants";
+import { evoNavLinks, ports, contributions, robotSetup } from "../data/evo";
 import FeatureCards from "../sections/FeatureCards";
 import AnimatedCounter from "../components/AnimatedCounter";
 
@@ -82,7 +82,7 @@ const EVO = () => {
 
   return (
     <div className="evo-page text-white bg-black min-h-screen">
-      <NavBar constant={evoNavLinks} showBack={true} />
+      <NavBar links={evoNavLinks} showBack={true} />
 
       {/* HERO */}
       <section id="evo-hero" className="relative min-h-screen overflow-hidden">
@@ -179,7 +179,7 @@ const EVO = () => {
         className="section-padding padding-x-lg space-y-10"
       >
         <TitleHeader title="Hardware Overview" />
-        <AnimatedCounter constant={ports} />
+        <AnimatedCounter items={ports} />
       </section>
 
       {/* CONTRIBUTIONS */}
@@ -224,7 +224,7 @@ const EVO = () => {
             fit on any standard LEGO controller — directly contributing to the
             team's National Championship and International Silver Medal.
           </p>
-          <FeatureCards constant={robotSetup} cols="4" />
+          <FeatureCards items={robotSetup} cols="4" />
           <div className="mt-8">
             <Link
               to="/robot"

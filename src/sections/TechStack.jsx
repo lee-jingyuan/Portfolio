@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import TitleHeader from "../components/TitleHeader";
-import { techStack } from "../constants";
+import { techStack } from "../data/home";
 
 // register plugin once
 gsap.registerPlugin(ScrollTrigger);

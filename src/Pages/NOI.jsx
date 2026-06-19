@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import TitleHeader from "../components/TitleHeader";
-import { noiNavLinks, algorithms } from "../constants";
+import { noiNavLinks, algorithms } from "../data/noi";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,7 +62,7 @@ const NOI = () => {
 
   return (
     <div className="noi-page text-white bg-black min-h-screen">
-      <NavBar constant={noiNavLinks} showBack={true} />
+      <NavBar links={noiNavLinks} showBack={true} />
 
       {/* HERO */}
       <section id="noi-hero" className="relative min-h-screen overflow-hidden">

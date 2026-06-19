@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { navLinks } from "../constants";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const NavBar = ({ constant, showBack = false }) => {
+const NavBar = ({ links, showBack = false }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleScroll = (e, link) => {
@@ -26,7 +25,7 @@ const NavBar = ({ constant, showBack = false }) => {
         {/* Desktop nav */}
         <nav className="hidden md:block">
           <ul className="flex gap-6">
-            {constant.map(({ link, name }) => (
+            {links.map(({ link, name }) => (
               <li key={name}>
                 <a href={link} onClick={(e) => handleScroll(e, link)}>{name}</a>
               </li>
@@ -61,7 +60,7 @@ const NavBar = ({ constant, showBack = false }) => {
           }`}
         >
           <ul className="flex flex-col items-center gap-6 py-6">
-            {constant.map(({ link, name }) => (
+            {links.map(({ link, name }) => (
               <li key={name}>
                 <a
                   href={link}

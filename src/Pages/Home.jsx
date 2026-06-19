@@ -6,7 +6,7 @@ import ExperienceSection from "../sections/ExperienceSection";
 import TechStack from "../sections/TechStack";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import { navLinks, abilities} from "../constants";
+import { navLinks, abilities } from "../data/home";
 import Testimonial from "../sections/Testimonial";
 
 const Home = () => {
@@ -15,10 +15,10 @@ const Home = () => {
   }, []);
   return (
     <>
-      <NavBar constant={navLinks}/>
+      <NavBar links={navLinks}/>
       <Hero />
       <ShowcaseSection/>
-      <FeatureCards  constant={abilities}/>
+      <FeatureCards items={abilities}/>
       <ExperienceSection />
       <Testimonial/>
       <TechStack />

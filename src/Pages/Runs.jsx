@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import { fllRuns24 } from "../constants";
+import { fllRuns24 } from "../data/fll";
 
 const Runs = () => {
   const scrollFLLRef = useRef(null);

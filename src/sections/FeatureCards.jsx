@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-const FeatureCards = ({ constant, cols = 3 }) => {
+const FeatureCards = ({ items, cols = 3 }) => {
   return (
     <div className="w-full padding-x-lg">
       <div className={`mx-auto grid-${cols}-cols`}>
-        {constant.map(({ imgPath, title, desc, link }) => (
+        {items.map(({ imgPath, title, desc, link }) => (
           <div
             key={title}
             className="card-border rounded-xl p-6 flex flex-col gap-2"

@@ -15,7 +15,7 @@ import {
   results,
   nationalPhotos,
   internationalPhotos,
-} from "../constants";
+} from "../data/wro";
 import FeatureCards from "../sections/FeatureCards";
 import AnimatedCounter from "../components/AnimatedCounter";
 
@@ -104,7 +104,7 @@ const WRORobot = () => {
 
   return (
     <div className="wro-page text-white bg-black min-h-screen">
-      <NavBar constant={wroNavLinks} showBack={true} />
+      <NavBar links={wroNavLinks} showBack={true} />
 
       {/* HERO */}
       <section id="wro-hero" className="relative min-h-screen overflow-hidden">
@@ -207,7 +207,7 @@ const WRORobot = () => {
 
       {/* STATS */}
       <div className="stats-section padding-x-lg mt-10">
-        <AnimatedCounter constant={robotStats} />
+        <AnimatedCounter items={robotStats} />
       </div>
 
       {/* TECH SPECS */}
@@ -217,7 +217,7 @@ const WRORobot = () => {
           title="Hardware System"
           sub="Tech Specs"
         />
-        <FeatureCards constant={techSpecs} cols="4" />
+        <FeatureCards items={techSpecs} cols="4" />
       </section>
 
       {/* MECHANISMS */}

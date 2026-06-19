@@ -6,14 +6,14 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AnimatedCounter = ({constant}) => {
+const AnimatedCounter = ({ items }) => {
   const counterRef = useRef(null);
   const countersRef = useRef([]);
 
   useGSAP(() => {
     countersRef.current.forEach((counter, index) => {
       const numberElement = counter.querySelector(".counter-number");
-      const item = constant[index];
+      const item = items[index];
 
       // Set initial value to 0
       gsap.set(numberElement, { innerText: "0" });
@@ -39,7 +39,7 @@ const AnimatedCounter = ({constant}) => {
   return (
     <div id="counter" ref={counterRef} className="padding-x-lg xl:mt-0 mt-32">
       <div className="mx-auto grid-4-cols">
-        {constant.map((item, index) => (
+        {items.map((item, index) => (
           <div
             key={index}
             ref={(el) => el && (countersRef.current[index] = el)}

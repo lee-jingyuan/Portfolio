@@ -110,7 +110,7 @@ export const expCards = [
     responsibilities: [
       "First robotics competition experience.",
       "Reached presentation finals in debut competition.",
-      "Built foundational skills in robot design and teamwork under structured constraints.",
+      "Built foundational skills in robot design and teamwork",
     ],
     logoPath: "images/NRC.webp",
     image: "images/NRCphoto.jpeg",
@@ -131,7 +131,7 @@ export const expCards = [
     date: "2024",
     responsibilities: [
       "Achieved 7th place at national level competition.",
-      "Designed a modular robot focused on adaptability across changing mission conditions.",
+      "Designed a modular robot focused on adaptability across different missions.",
       "Optimised code structure for fast on-the-spot adjustments and debugging under time constraints.",
     ],
     logoPath: "images/wro.webp",

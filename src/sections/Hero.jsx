@@ -50,14 +50,19 @@ const Hero = () => {
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none max-w-lg">
               I design custom 3D-printed mechanisms, write control logic in C++
               and Python, and compete in robotics and algorithms at a national
-              level. I design the parts, print them, wire them up, and write
-              the code that drives them.
+              level. I design the parts, print them, wire them up, and write the
+              code that drives them.
             </p>
-            <Button
-              className="md:w-80 md:h-16 w-60 h-12"
-              targetId="work"
-              text="See my Work"
-            />
+            <a
+              href="images/JY-Portfolio-EAE.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-btn md:w-80 md:h-16 w-60 h-12"
+            >
+              <div className="inner">
+                <span>Download Portfolio</span>
+              </div>
+            </a>
           </div>
         </header>
         <figure>

@@ -2,7 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import HeroLights from "./HeroLights";
-import { Model } from "./Wrorobot";
+import { Robot } from "./Wrorobot-model";
 import { useState } from "react";
 
 const HeroExprience = () => {
@@ -35,7 +35,7 @@ const HeroExprience = () => {
         />
         <HeroLights />
         <group scale={isMobile ? 0.7 : 1} position={[0, -3.5, 0]}>
-          <Model />
+          <Robot />
         </group>
       </Canvas>
     </>
